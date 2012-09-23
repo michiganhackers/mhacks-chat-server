@@ -1,0 +1,47 @@
+!!! 5
+
+html
+	head
+		link(href="/css/bootstrap.min.css", type="text/css", rel="stylesheet")
+
+		script(src="/js/jquery-1.8.2.min.js")
+		script(src="/js/tenant-client.js")
+		script(src="/js/chat-client.js")
+
+		style
+			.chat-title {
+				margin-bottom: 20px;
+			}
+
+			.chat-title h1 {
+				margin-bottom: 0px;
+			}
+
+			.message-input-wrapper {
+				margin-bottom: 40px;
+			}
+
+			.chat-log {
+				margin-bottom: 20px;
+			}
+			
+	body
+		div(style="position:relative;height:100%;").container
+			.chat-title.row
+				h1= "The Michigan Hackers Chat Server"
+
+			form#message-input-form.message-input-wrapper.form-horizontal.row
+				.input-prepend
+					span.add-on
+						i.icon-pencil
+					input(type="text", class="span6 message-input", id="message-input")
+
+			#chat-log.chat-log.row
+				blockquote
+					p.message
+						= "Hello World"
+					small
+						span.user= "Max Seiden"
+						= " on "
+						span.date= "2012-09-23 at 2:30am"
+
